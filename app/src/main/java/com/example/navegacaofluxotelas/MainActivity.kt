@@ -31,7 +31,10 @@ class MainActivity : ComponentActivity() {
                         startDestination = "login"
                     ) {
                         composable (route = "login") {
-                            LoginScreen(modifier = Modifier.padding(innerPadding))
+                            //navega para a próxima tela
+                            LoginScreen(modifier = Modifier.padding(innerPadding),
+                                navController = navController
+                            )
                         }
 
                         composable (route = "menu") {
